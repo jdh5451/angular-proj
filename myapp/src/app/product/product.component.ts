@@ -42,8 +42,9 @@ export class ProductComponent {
     service:ProductService
     cService:CartService
 
-  constructor(service:ProductService){
+  constructor(service:ProductService, cService:CartService){
     this.service = service
+    this.cService=cService
     console.log('constructor called')
   }
 
@@ -74,7 +75,9 @@ export class ProductComponent {
     this.service.toggleFave(this.prod.title)
 }
 
-    
+    addToCart(){
+      this.cService.addProduct({title:this.prod.title, category:this.prod.category, price: this.prod.price, favorite: this.prod.favorite})
+    }
 
     showHead(){
         return 'none'

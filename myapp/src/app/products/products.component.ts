@@ -58,13 +58,7 @@ export class ProductsComponent {
     console.log('onDestroy called')
   }
 
-  updateTitle(e:Event){
-    this.title = (<HTMLInputElement> e.target).value
-  }
-
-  onAdd(){
-    this.service.addProduct({title:this.title, category:this.category})
-  }
+  
 
   filter(e){
     this.products= this.service.filter(e.target.value)

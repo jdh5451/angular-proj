@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
+import { CartComponent } from './cart/cart.component';
 import { ShortenPipe } from './shorten.pipe';
 import { ProductService } from './products/products.service';
+import { CartService } from './cart/cart.service';
 import { ObservSampleComponent } from './obsersample.component';
 import { ProductListComponent } from './products/list.component';
 
@@ -14,6 +16,7 @@ import { ProductListComponent } from './products/list.component';
     AppComponent,
     ProductComponent,
     ProductsComponent,
+    CartComponent,
     ObservSampleComponent,
     ProductListComponent,
     ShortenPipe,
